@@ -3,25 +3,25 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-const babel = require('gulp-babel');
-const eslint = require('gulp-eslint');
-const notify = require("gulp-notify");
+// const babel = require('gulp-babel');
+// const eslint = require('gulp-eslint');
+// const notify = require("gulp-notify");
 
-gulp.task('lint', () => {
-    return gulp.src(['js/*.js', '!node_modules/**'])
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
-        .on("error", notify.onError('Error!'));
-});
+// gulp.task('lint', () => {
+//     return gulp.src(['js/*.js', '!node_modules/**'])
+//         .pipe(eslint())
+//         .pipe(eslint.format())
+//         .pipe(eslint.failAfterError())
+//         .on("error", notify.onError('Error!'));
+// });
 
-gulp.task('babel', () => {
-    return gulp.src('js/*.js')
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('dist'));
-});
+// gulp.task('babel', () => {
+//     return gulp.src('js/*.js')
+//         .pipe(babel({
+//             presets: ['es2015']
+//         }))
+//         .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('sass', function() {
     return gulp.src('./sass/*.scss')
@@ -41,5 +41,5 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch(['./*.html', './js/*.js', './sass/*.scss'], ['lint', 'babel', 'sass']);
+    gulp.watch(['./*.html', './js/*.js', './sass/*.scss'], ['sass']);
 });
