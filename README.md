@@ -1,3 +1,3 @@
-# TIY-3-3-To-Do-List
+# TIY-6-4-To-Do-List
 
-The Iron Yard week 3, day 3 assignment.  The goal of this assignment was to build the functionality in Javascript of a todo list.  The HTML and CSS was provided and I added the js to make it work.  
+The Iron Yard week 6, day 4 assignment.  The goal of this assignment was to recreate the ToDo list, originially done in vanilla js, using ANgular.  The HTML and CSS was provided and I added the Angular to make it work.  

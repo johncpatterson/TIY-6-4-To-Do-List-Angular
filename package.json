@@ -1,0 +1,25 @@
+{
+  "name": "tiy_6_4_todo_list_angular",
+  "version": "1.0.0",
+  "description": "Angular Todo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johncpatterson/TIY-6-4-To-Do-List-Angular.git"
+  },
+  "author": "John Patterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johncpatterson/TIY-6-4-To-Do-List-Angular.git/issues"
+  },
+  "homepage": "https://github.com/johncpatterson/TIY-6-4-To-Do-List-Angular.git#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
