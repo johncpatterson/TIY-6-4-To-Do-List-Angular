@@ -3,34 +3,34 @@
 <html ng-app="todo">
 
 <head>
-    <meta charset='utf-8'>
-    <title>TODO List</title>
-    <meta name='description' content='A simple app to track TODO items'>
-    <meta name='author' content=''>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' type='text/css' href='css/main.css'>
+   <meta charset='utf-8'>
+   <title>TODO List</title>
+   <meta name='description' content='A simple app to track TODO items'>
+   <meta name='author' content=''>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
+   <link rel='stylesheet' type='text/css' href='css/main.css'>
 </head>
 
 <body ng-controller="TodoController as controller">
-    <header>
-        <h1>Remember the crap you have to do!</h1>
-    </header>
-    <main>
-        <form ng-submit="controller.submit(controller.form.todo)">
-            <input type='text' class='new-todo' ng-model="controller.form.todo" name="ListItem" placeholder='What needs to be done?'>
-        </form>
-        <ul class='items'>
-            <li ng-repeat="todo in controller.todos">
-                <article ng-class="{check: deleted}">
-                    <button class='check' ng-model="deleted"></button>
-                    <p>{{todo.description}}</p>
-                    <input type='text' class='edit-todo' value=''>
-                    <button class='delete' ng-click="controller.onclick(todo.id)">X</button>
-                </article>
-            </li>
-            <!-- example of existing item (incomplete)
+   <header>
+      <h1>Remember the crap you have to do!</h1>
+   </header>
+   <main>
+      <form ng-submit="controller.submit(controller.form.todo)">
+         <input type='text' class='new-todo' ng-model="controller.form.todo" name="ListItem" placeholder='What needs to be done?'>
+      </form>
+      <ul class='items'>
+         <li ng-repeat="todo in controller.todos">
+            <article ng-class="{check: deleted}">
+               <button class='check' ng-model="deleted"></button>
+               <p>{{todo.description}}</p>
+               <input type='text' class='edit-todo' value=''>
+               <button class='delete' ng-click="controller.onclick(todo.id)">X</button>
+            </article>
+         </li>
+         <!-- example of existing item (incomplete)
                 <li>
                     <article>
                         <button class='check'></button>
@@ -40,7 +40,7 @@
                     </article>
                 </li>
                 -->
-            <!-- example of completed item
+         <!-- example of completed item
                 <li>
                     <article class='completed'>
                         <button class='check'></button>
@@ -50,28 +50,28 @@
                     </article>
                 </li>
                 -->
-        </ul>
-        <footer>
-            <p class='remaining'><span class='incomplete-items'>0</span> items left</p>
-            <nav>
-                <ul>
-                    <li>
-                        <button class='show-all active'>All</button>
-                    </li>
-                    <li>
-                        <button class='show-active'>Active</button>
-                    </li>
-                    <li>
-                        <button class='show-completed'>Completed</button>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </main>
-    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <script src="controllers/todo.js"></script>
-    <script src="factories/storetodos.js"></script>
+      </ul>
+      <footer>
+         <p class='remaining'><span class='incomplete-items'>0</span> items left</p>
+         <nav>
+            <ul>
+               <li>
+                  <button class='show-all active'>All</button>
+               </li>
+               <li>
+                  <button class='show-active'>Active</button>
+               </li>
+               <li>
+                  <button class='show-completed'>Completed</button>
+               </li>
+            </ul>
+         </nav>
+      </footer>
+   </main>
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+   <script src="main.js"></script>
+   <script src="controllers/todo.js"></script>
+   <script src="factories/storetodos.js"></script>
 </body>
 
 </html>
