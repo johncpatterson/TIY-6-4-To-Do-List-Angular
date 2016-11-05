@@ -41,9 +41,8 @@
             return deletedTodo;
          }
 
-         const markTodoComplete = function() {
+         const markTodoComplete = function(id) {
             var id = this.id;
-
             todo.forEach(function(todo, idx) {
                if (todo.id === id) {
                   if (todo.isComplete = true) {

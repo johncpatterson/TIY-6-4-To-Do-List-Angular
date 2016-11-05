@@ -23,11 +23,11 @@
       </form>
       <ul class='items'>
          <li ng-repeat="todo in controller.todos">
-            <article ng-class="{check: deleted}">
-               <button class='check' ng-model="deleted"></button>
-               <p>{{todo.description}}</p>
+            <article>
+               <button class='check' ng-click="controller.onclickChecked(todo.id)"></button>
+               <p>{{todo.description}}</p>   <!-- I want to put this ng-if on the todo description: ng-if="newTodo.isComplete" class="completed" -->
                <input type='text' class='edit-todo' value=''>
-               <button class='delete' ng-click="controller.onclick(todo.id)">X</button>
+               <button class='delete' ng-click="controller.onclickDelete(todo.id)">X</button>
             </article>
          </li>
          <!-- example of existing item (incomplete)
