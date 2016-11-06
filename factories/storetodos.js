@@ -40,11 +40,11 @@
                }
             });
             var deletedTodo = todos.splice(index, 1);
-            return deletedTodo;
+            localStorage.setItem('todos', JSON.stringify(todos));
+            return todos;
          }
 
          const markTodoComplete = function(id) {
-            var id = this.id;
             todos.forEach(function(todo, idx) {
                if (todo.id === id) {
                   if (todo.isComplete === true) {
@@ -55,6 +55,7 @@
                }
 
             });
+            localStorage.setItem('todos', JSON.stringify(todos));
             return todos;
          }
 
