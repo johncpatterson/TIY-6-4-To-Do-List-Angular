@@ -23,9 +23,12 @@
          const getTodo = function() {
             if (localStorage.getItem('todos')) {
                var returnThisTodo = (JSON.parse(localStorage.getItem('todos')));
+               todos = returnThisTodo;
             } else
                var returnThisTodo = 'You have not created any notes yet';
-            return returnThisTodo;
+               var todoCount = todos.length;
+               // console.log(todoCount);
+            return returnThisTodo;  
          }
 
          const deleteTodo = function(id) {
@@ -43,9 +46,9 @@
 
          const markTodoComplete = function(id) {
             var id = this.id;
-            todo.forEach(function(todo, idx) {
+            todos.forEach(function(todo, idx) {
                if (todo.id === id) {
-                  if (todo.isComplete = true) {
+                  if (todo.isComplete === true) {
                      todo.isComplete = false;
                   } else {
                      todo.isComplete = true;
@@ -53,7 +56,7 @@
                }
 
             });
-            return markTodoComplete;
+            return todos;
          }
 
          return {

@@ -22,7 +22,7 @@
          <input type='text' class='new-todo' ng-model="controller.form.todo" name="ListItem" placeholder='What needs to be done?'>
       </form>
       <ul class='items'>
-         <li ng-repeat="todo in controller.todos">
+         <li ng-repeat="todo in controller.todos track by $index">
             <article>
                <button class='check' ng-click="controller.onclickChecked(todo.id)"></button>
                <p>{{todo.description}}</p>   <!-- I want to put this ng-if on the todo description: ng-if="newTodo.isComplete" class="completed" -->
@@ -52,7 +52,7 @@
                 -->
       </ul>
       <footer>
-         <p class='remaining'><span class='incomplete-items'>0</span> items left</p>
+         <p class='remaining'><span class='incomplete-items'><!-- {{todoCount}} --></span> items left</p>
          <nav>
             <ul>
                <li>
