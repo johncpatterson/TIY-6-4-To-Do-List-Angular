@@ -11,11 +11,12 @@
          }
 
          vm.onclickDelete = function(id) {
-            console.log(id)
+            // console.log(id)
             vm.todoDeleted = storetodos.deleteTodo(id);
          }
 
          vm.onclickChecked = function(id) {
+            console.log(id);
             vm.todoChecked = storetodos.markTodoComplete(id);
          }
 

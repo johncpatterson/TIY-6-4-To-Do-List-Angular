@@ -32,7 +32,6 @@
          }
 
          const deleteTodo = function(id) {
-            var id = this.id;
             var index = null;
 
             todos.forEach(function(todo, idx) {

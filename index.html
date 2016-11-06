@@ -23,7 +23,7 @@
       </form>
       <ul class='items'>
          <li ng-repeat="todo in controller.todos track by $index">
-            <article>
+            <article ng-class="{completed: todo.isComplete}">
                <button class='check' ng-click="controller.onclickChecked(todo.id)"></button>
                <p>{{todo.description}}</p>   <!-- I want to put this ng-if on the todo description: ng-if="newTodo.isComplete" class="completed" -->
                <input type='text' class='edit-todo' value=''>
