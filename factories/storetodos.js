@@ -26,9 +26,9 @@
                todos = returnThisTodo;
             } else
                var returnThisTodo = 'You have not created any notes yet';
-               var todoCount = todos.length;
-               // console.log(todoCount);
-            return returnThisTodo;  
+            var todoCount = todos.length;
+            // console.log(todoCount);
+            return returnThisTodo;
          }
 
          const deleteTodo = function(id) {
@@ -59,11 +59,44 @@
             return todos;
          }
 
+         const ShowAll = function() {
+            todos.forEach(function() {
+               function showAll() {
+                  return todos;
+                  var filteredTodos = [todos].filter(showAll);
+               }
+            })
+            return filteredTodos;
+         }
+
+         const ShowActive = function() {
+            todos.forEach(function() {
+               function showActive() {
+                  return todos.isComplete === false;
+                  var filteredTodos = [todos].filter(showActive);
+               }
+            })
+            return filteredTodos;
+         }
+
+         const ShowCompleted = function() {
+            todos.forEach(function() {
+               function showCompleted() {
+                  return todos.isComplete === true  ;
+                  var filteredTodos = [todos].filter(showCompleted);
+               }
+            })
+            return filteredTodos;
+         }
+
          return {
             saveTodo,
             getTodo,
             deleteTodo,
-            markTodoComplete
+            markTodoComplete,
+            ShowAll,
+            ShowActive,
+            ShowCompleted
          }
       });
 })();

@@ -16,8 +16,20 @@
          }
 
          vm.onclickChecked = function(id) {
-            console.log(id);
+            // console.log(id);
             vm.todoChecked = storetodos.markTodoComplete(id);
+         }
+
+         vm.onClickShowAll = function() {
+            vm.todoShowAll = storetodos.ShowAll();
+         }
+
+         vm.onClickShowActive = function() {
+            vm.todoShowAcive = storetodos.ShowActive();
+         }
+
+         vm.onClickShowCompleted = function() {
+            vm.todoShowCompleted = storetodos.ShowCompleted();
          }
 
          let returnedTodo = storetodos.getTodo();

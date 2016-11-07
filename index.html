@@ -25,44 +25,24 @@
          <li ng-repeat="todo in controller.todos track by $index">
             <article ng-class="{completed: todo.isComplete}">
                <button class='check' ng-click="controller.onclickChecked(todo.id)"></button>
-               <p>{{todo.description}}</p>   <!-- I want to put this ng-if on the todo description: ng-if="newTodo.isComplete" class="completed" -->
+               <p ng-cloak>{{todo.description}}</p>
                <input type='text' class='edit-todo' value=''>
                <button class='delete' ng-click="controller.onclickDelete(todo.id)">X</button>
             </article>
          </li>
-         <!-- example of existing item (incomplete)
-                <li>
-                    <article>
-                        <button class='check'></button>
-                        <p>learn html</p>
-                        <input type='text' class='edit-todo' value='learn html'>
-                        <button class='delete'>X</button>
-                    </article>
-                </li>
-                -->
-         <!-- example of completed item
-                <li>
-                    <article class='completed'>
-                        <button class='check'></button>
-                        <p class='complete'>learn css</p>
-                        <input type='text' class='edit-todo' value='learn css'>
-                        <button class='delete'>X</button>
-                    </article>
-                </li>
-                -->
       </ul>
       <footer>
          <p class='remaining'><span class='incomplete-items'><!-- {{todoCount}} --></span> items left</p>
          <nav>
             <ul>
                <li>
-                  <button class='show-all active'>All</button>
+                  <button class='show-all active' ng-click="controller.onClickShowAll()">All</button>
                </li>
                <li>
-                  <button class='show-active'>Active</button>
+                  <button class='show-active' ng-click="controller.onClickShowActive()">Active</button>
                </li>
                <li>
-                  <button class='show-completed'>Completed</button>
+                  <button class='show-completed' ng-click="controller.onClickShowCompleted">Completed</button>
                </li>
             </ul>
          </nav>
