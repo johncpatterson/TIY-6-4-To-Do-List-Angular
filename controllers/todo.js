@@ -32,6 +32,8 @@
 
          let returnedTodo = storetodos.getTodo();
          vm.todos = returnedTodo;
+         vm.todoCount = storetodos.todoCount();
+
 
       });
 })();

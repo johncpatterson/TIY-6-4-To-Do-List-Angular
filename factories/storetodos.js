@@ -67,7 +67,7 @@
          const ShowActive = function() {
             var filterActive = todos.filter(function(item) {
                if (item.isComplete == false) {
-                  return false;
+                  return true;
                }
             })
             return filterActive;
@@ -82,6 +82,11 @@
             return filterComplete;
          }
 
+         const todoCount = function() {
+            var HowManyTodos = todos.length;
+            return HowManyTodos;
+          }
+
          return {
             saveTodo,
             getTodo,
@@ -89,7 +94,8 @@
             markTodoComplete,
             ShowAll,
             ShowActive,
-            ShowCompleted
+            ShowCompleted,
+            todoCount
          }
       });
 })();

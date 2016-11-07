@@ -32,7 +32,7 @@
          </li>
       </ul>
       <footer>
-         <p class='remaining'><span class='incomplete-items'><!-- {{todoCount}} --></span> items left</p>
+         <p class='remaining'><span class='incomplete-items'>{{todoCount}}</span> items left</p>
          <nav>
             <ul>
                <li>
@@ -42,7 +42,7 @@
                   <button class='show-active' ng-click="controller.onClickShowActive()">Active</button>
                </li>
                <li>
-                  <button class='show-completed' ng-click="controller.onClickShowCompleted">Completed</button>
+                  <button class='show-completed' ng-click="controller.onClickShowCompleted()">Completed</button>
                </li>
             </ul>
          </nav>
