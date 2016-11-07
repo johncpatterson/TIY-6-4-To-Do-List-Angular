@@ -16,7 +16,7 @@
             var addedTodo = new newTodo(todo, false, id);
             todos.push(addedTodo);
             localStorage.setItem('todos', JSON.stringify(todos));
-            console.log(todos);
+            // console.log(todos);
             return todos;
          }
 
@@ -84,8 +84,9 @@
 
          const todoCount = function() {
             var HowManyTodos = todos.length;
+            // console.log(HowManyTodos);
             return HowManyTodos;
-          }
+         }
 
          return {
             saveTodo,

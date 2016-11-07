@@ -32,17 +32,17 @@
          </li>
       </ul>
       <footer>
-         <p class='remaining'><span class='incomplete-items'>{{todoCount}}</span> items left</p>
+         <p class='remaining'><span class='incomplete-items'>{{controller.counter}}</span> items left</p>
          <nav>
             <ul>
                <li>
-                  <button class='show-all active' ng-click="controller.onClickShowAll()">All</button>
+                  <button class='show-all' ng-class="{active: controller.isAll}" ng-click="controller.onClickShowAll()">All</button>
                </li>
                <li>
-                  <button class='show-active' ng-click="controller.onClickShowActive()">Active</button>
+                  <button class='show-active' ng-class="{active: controller.isActive}" ng-click="controller.onClickShowActive()">Active</button>
                </li>
                <li>
-                  <button class='show-completed' ng-click="controller.onClickShowCompleted()">Completed</button>
+                  <button class='show-completed' ng-class="{active: controller.isCompleted}" ng-click="controller.onClickShowCompleted()">Completed</button>
                </li>
             </ul>
          </nav>
