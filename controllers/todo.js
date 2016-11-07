@@ -11,25 +11,23 @@
          }
 
          vm.onclickDelete = function(id) {
-            // console.log(id)
             vm.todoDeleted = storetodos.deleteTodo(id);
          }
 
          vm.onclickChecked = function(id) {
-            // console.log(id);
             vm.todoChecked = storetodos.markTodoComplete(id);
          }
 
          vm.onClickShowAll = function() {
-            vm.todoShowAll = storetodos.ShowAll();
+            vm.todos = storetodos.ShowAll();
          }
 
          vm.onClickShowActive = function() {
-            vm.todoShowAcive = storetodos.ShowActive();
+            vm.todos = storetodos.ShowActive();
          }
 
          vm.onClickShowCompleted = function() {
-            vm.todoShowCompleted = storetodos.ShowCompleted();
+            vm.todos = storetodos.ShowCompleted();
          }
 
          let returnedTodo = storetodos.getTodo();

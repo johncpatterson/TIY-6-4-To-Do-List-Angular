@@ -60,33 +60,26 @@
          }
 
          const ShowAll = function() {
-            todos.forEach(function() {
-               function showAll() {
-                  return todos;
-                  var filteredTodos = [todos].filter(showAll);
-               }
-            })
-            return filteredTodos;
+            var filterAll = todos;
+            return filterAll;
          }
 
          const ShowActive = function() {
-            todos.forEach(function() {
-               function showActive() {
-                  return todos.isComplete === false;
-                  var filteredTodos = [todos].filter(showActive);
+            var filterActive = todos.filter(function(item) {
+               if (item.isComplete == false) {
+                  return false;
                }
             })
-            return filteredTodos;
+            return filterActive;
          }
 
          const ShowCompleted = function() {
-            todos.forEach(function() {
-               function showCompleted() {
-                  return todos.isComplete === true  ;
-                  var filteredTodos = [todos].filter(showCompleted);
+            var filterComplete = todos.filter(function(item) {
+               if (item.isComplete == true) {
+                  return true;
                }
             })
-            return filteredTodos;
+            return filterComplete;
          }
 
          return {
